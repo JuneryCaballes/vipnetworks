@@ -1,91 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>Home | VIP Networks</title>
-	
-	<!-- core CSS -->
-    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="dist/css/font-awesome.min.css" rel="stylesheet">
-    <link href="dist/css/animate.min.css" rel="stylesheet">
-    <link href="dist/css/prettyPhoto.css" rel="stylesheet">
-    <link href="dist/css/main.css" rel="stylesheet">
-    <link href="dist/css/responsive.css" rel="stylesheet">
-    <!--[if lt IE 9]>
-    <script src="dist/js/html5shiv.js"></script>
-    <script src="dist/js/respond.min.js"></script>
-    <![endif]-->       
-    <link rel="shortcut icon" href="dist/images/ico/viplogo.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="dist/images/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="dist/images/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="dist/images/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="dist/images/ico/apple-touch-icon-57-precomposed.png">
-    <!-- scripts -->
-    <script src="dist/js/jquery.js"></script>
-    <script src="dist/js/bootstrap.min.js"></script>
-    <script src="dist/js/jquery.prettyPhoto.js"></script>
-    <script src="dist/js/jquery.isotope.min.js"></script>
-    <script src="dist/js/wow.min.js"></script>
-</head><!--/head-->
+
+<?php include ('links.php'); ?>
+<title>Home | VIP Networks</title>
 
 <body class="homepage">
 
     <header id="header">
-        <div class="top-bar">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-6 col-xs-4">
-                        <div class="top-number"><p><i class="fa fa-phone-square"></i> (023) 412-0288 </p></div>
-                    </div>
-                    <div class="col-sm-6 col-xs-8">
-                       <div class="social">
-                            <ul class="social-share">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li> 
-                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                                <li><a href="#"><i class="fa fa-skype"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                            </ul>
-                       </div>
-                    </div>
-                </div>
-            </div><!--/.container-->
-        </div><!--/.top-bar-->
 
+    <?php include ( 'header.php' ); ?>
 
         <nav class="navbar navbar-inverse" role="banner">
             <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="index.html"><img id="logo" src="dist/images/viplogo.png" alt="logo"></a>
-                </div>
+                
+                <?php include ('navbar-header.php') ?>
 				
                 <div class="collapse navbar-collapse navbar-right">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="index.html">Home</a></li>
-                        <li><a href="pages/landing/opportunities.html">Opportunities</a></li>
-                        <li><a href="pages/landing/about-us.html">About Us</a></li>
-                        <li><a href="pages/landing/testimonials.html">Testimonials</a></li>
+                        <li class="active"><a href=<?php echo site_url('main/index')?>>Home</a></li>
+                        <li><a href=<?php echo site_url('main/opportunities')?>>Opportunities</a></li>
+                        <li><a href=<?php echo site_url('main/about')?>>About Us</a></li>
+                        <li><a href=<?php echo site_url('main/testimonials')?>>Testimonials</a></li>
                         <li class="dropdown">
-                            <a href="pages/landing/products.html" class="dropdown-toggle">Products <i class="fa fa-angle-down"></i></a>
+                            <a href=<?php echo site_url('main/products')?> class="dropdown-toggle">Products <i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu">
-                                <li><a href="pages/landing/beauty-soaps.html">Beauty Soaps</a></li>
-                                <li><a href="pages/landing/coffees.html">Coffees</a></li>
-                                <li><a href="pages/landing/food-supplements.html">Food Supplements</a></li>
-                                <li><a href="pages/landing/perfumes.html">Perfumes</a></li>
+                                <li><a href=<?php echo site_url('main/p1')?>>Beauty Soaps</a></li>
+                                <li><a href=<?php echo site_url('main/p2')?>>Coffees</a></li>
+                                <li><a href=<?php echo site_url('main/p3')?>>Food Supplements</a></li>
+                                <li><a href=<?php echo site_url('main/p4')?>>Perfumes</a></li>
                             </ul>
                         </li>
-                        <li><a href="pages/landing/contact-us.html">Contact Us</a></li> 
-                        <li><a href="pages/landing/sign-in.html">Sign In</a></li>                        
+                        <li><a href=<?php echo site_url('main/contact')?>>Contact Us</a></li> 
+                        <li><a href=<?php echo site_url('main/signin')?>>Sign In</a></li>                        
                     </ul>
                 </div>
             </div><!--/.container-->
@@ -101,20 +47,20 @@
             </ol>
             <div class="carousel-inner">
 
-                <div class="item active" style="background-image: url(dist/images/slider/people-discussing.jpg)">
+                <div class="item active" style="background-image: url(http://localhost/vipnetworks/assets/dist/images/slider/people-discussing.jpg)">
                     <div class="container rows">
                         <div class="row slide-margin">
                             <div class="col-sm-6">
                                 <div class="carousel-content">
                                     <center><h1 class="animation animated-item-1">VIPNETWORKS.PH</h1></center>
                                     <center><h2 class="animation animated-item-2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Your partner in providing you business with minimal risk, small effort and maximized profits.</h2></center>
-                                    <center><a class="btn-slide animation animated-item-3" href="pages/landing/about-us.html">Read More</a></center>
+                                    <center><a class="btn-slide animation animated-item-3" href=<?php echo site_url('main/about')?>>Read More</a></center>
                                 </div>
                             </div>
 
                             <div class="col-sm-6 hidden-xs animation animated-item-4">
                                 <div class="slider-img">
-                                    <img src="dist/images/slider/img1.png" class="img-responsive">
+                                    <img src=<?php echo base_url() . "/assets/dist/images/slider/img1.png"?> class="img-responsive">
                                 </div>
                             </div>
 
@@ -122,7 +68,7 @@
                     </div>
                 </div><!--/.item-->
 
-                <div class="item" style="background-image: url(dist/images/slider/house.jpg)">
+                <div class="item" style="background-image: url(http://localhost/vipnetworks/assets/dist/images/slider/house.jpg)">
                     <div class="container rows">
                         <div class="row slide-margin">
                             <div class="col-sm-6">
@@ -130,14 +76,14 @@
                                     <center><h1 class="animation animated-item-1">SEARCHING FOR A WAY OUT ?</h1>
                                    <h2 class="animation animated-item-2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Look no further! Start your business with us, check out our opportunities.</h2>
                                    <h2 class="animation animated-item-2">&nbsp;&nbsp;&nbsp;&nbsp;CNN reported that a new home based business is started every 11 seconds...</h2>
-                                    <a class="btn-slide animation animated-item-3" href="pages/landing/opportunities.html">Read More</a>
+                                    <a class="btn-slide animation animated-item-3" href=<?php echo site_url('main/opportunities')?>>Read More</a>
                                     </center>
                                 </div>
                             </div>
 
                             <div class="col-sm-6 hidden-xs animation animated-item-4">
                                 <div class="slider-img">
-                                    <img src="dist/images/slider/img2.png" class="img-responsive">
+                                    <img src=<?php echo base_url() . "/assets/dist/images/slider/img2.png"?> class="img-responsive">
                                 </div>
                             </div>
 
@@ -145,20 +91,20 @@
                     </div>
                 </div><!--/.item-->
 
-                <div class="item" style="background-image: url(dist/images/slider/mac.jpg)">
+                <div class="item" style="background-image: url(http://localhost/vipnetworks/assets/dist/images/slider/mac.jpg)">
                     <div class="container rows">
                         <div class="row slide-margin">
                             <div class="col-sm-6">
                                 <div class="carousel-content">
                                     <center>
                                     <h2 class="animation animated-item-2"><i>Fortune</i> Magazine considers our industry, network marketing "the best kept secret in the business world"</h2>
-                                    <a class="btn-slide animation animated-item-3" href="pages/landing/register.html">Join Us Now !</a>
+                                    <a class="btn-slide animation animated-item-3" href=<?php echo site_url('main/register')?>>Join Us Now !</a>
                                     </center>
                                 </div>
                             </div>
                             <div class="col-sm-6 hidden-xs animation animated-item-4">
                                 <div class="slider-img">
-                                    <img src="dist/images/slider/img3.png" class="img-responsive">
+                                    <img src=<?php echo base_url() . "/assets/dist/images/slider/img3.png"?>  class="img-responsive">
                                 </div>
                             </div>
                         </div>
@@ -200,7 +146,7 @@
                                             <span class="glyphicon glyphicon-question-sign fa-5x" style="color:#7abcff"></span>
                                         </div>
                                         <div class="media-body">
-                                             <p>Business is the distribution of products & services. Big Business is the efficient distribution of products & services. We teach and provide you the means to do so!</p>
+                                             <p>Business is the /assets/distribution of products & services. Big Business is the efficient /assets/distribution of products & services. We teach and provide you the means to do so!</p>
                                         </div>
                                   </div>
                               </div>
@@ -239,7 +185,7 @@
                               <div class="panel-body">
                                   <div class="media accordion-inner">
                                         <div class="pull-left">
-                                            <img class="img-responsive" src="dist/images/accordion1.png">
+                                            <img class="img-responsive" src=<?php echo base_url() . "/assets/dist/images/accordion1.png"?> >
                                         </div>
                                         <div class="media-body">
                                              <h4>VIP Introduces New RFID Standard for Healthcare Industry</h4>
@@ -264,7 +210,7 @@
                               <div class="panel-body">
                                   <div class="media accordion-inner">
                                         <div class="pull-left">
-                                            <img class="img-responsive" src="dist/images/client3.png">
+                                            <img class="img-responsive" src=<?php echo base_url() ."/assets/dist/images/client3.png"?>>
                                         </div>
                                         <div class="media-body">
                                              <h4>VIP Introduces New RFID Standard for Healthcare Industry</h4>
@@ -289,7 +235,7 @@
                               <div class="panel-body">
                                   <div class="media accordion-inner">
                                         <div class="pull-left">
-                                            <img class="img-responsive" src="dist/images/client2.png">
+                                            <img class="img-responsive" src=<?php echo base_url() . "/assets/dist/images/client2.png" ?>>
                                         </div>
                                         <div class="media-body">
                                              <h4>VIP Introduces New RFID Standard for Healthcare Industry</h4>
@@ -314,7 +260,7 @@
                              <div class="panel-body">
                                   <div class="media accordion-inner">
                                         <div class="pull-left">
-                                            <img class="img-responsive" src="dist/images/client1.png">
+                                            <img class="img-responsive" src=<?php echo base_url() . "/assets/dist/images/client1.png" ?>>
                                         </div>
                                         <div class="media-body">
                                              <h4>VIP Introduces New RFID Standard for Healthcare Industry</h4>
@@ -361,7 +307,7 @@
                                         <div class="media">
                                             <div class="media-body">
                                                  <h2>Our Vision</h2>
-                                                 <p>We see that as industries and trends change and improve everyday, in-order to keep up with the industry of network marketing in the modern world VIPNetworks.PH dedicates itself to providing our distributors a competitive edge by being able to choose from different linkes of products such as Health, Beauty, Personal Care, and Information.
+                                                 <p>We see that as industries and trends change and improve everyday, in-order to keep up with the industry of network marketing in the modern world VIPNetworks.PH dedicates itself to providing our /assets/distributors a competitive edge by being able to choose from different linkes of products such as Health, Beauty, Personal Care, and Information.
                                                  </p>
                                                  <p>In today's modern generation, the internet has changed the business landscape. We see ourselves to be the leading Philippine based network marketing company with our improved strategies and online marketing platforms.</p>
                                             </div>
@@ -378,7 +324,7 @@
                         <h2>Testimonials</h2>
                          <div class="media testimonial-inner">
                             <div class="pull-left">
-                                <img class="img-responsive img-circle" src="dist/images/client3.png">
+                                <img class="img-responsive img-circle" src=<?php echo base_url() . "/assets/dist/images/client3.png" ?>>
                             </div>
                             <div class="media-body">
                                 <p>I have three words for this product: Wow, amazing, unbelievable! Over..</p>
@@ -402,9 +348,9 @@
 
             <div class="partners">
                 <ul>
-                    <li> <a href="#"><img hidden class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms" src="dist/images/partners/cebuana.png"></a></li>
-                    <li> <a href="#"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="900ms" src="dist/images/partners/western_union.png" style="margin-left: 100%"></a></li>
-                    <li> <a href="#"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="1500ms" src="dist/images/partners/m_lhuiller.png" style="margin-left: 200%"></a></li>
+                    <li> <a href="#"><img hidden class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms" src=<?php echo base_url() . "/assets/dist/images/partners/cebuana.png"?>></a></li>
+                    <li> <a href="#"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="900ms" src=<?php echo base_url() ."/assets/dist/images/partners/western_union.png"?> style="margin-left: 100%"></a></li>
+                    <li> <a href="#"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="1500ms" src=<?php echo base_url() ."/assets/dist/images/partners/m_lhuiller.png"?> style="margin-left: 200%"></a></li>
                 </ul>
             </div>        
         </div><!--/.container-->
@@ -428,23 +374,6 @@
         </div><!--/.container-->    
     </section><!--/#conatcat-info-->
 
-    <footer id="footer" class="midnight-blue">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6">
-                    &copy; 2016 <a target="_blank" href="index.html" title="VIP Networks">VIP Networks</a>. All Rights Reserved.
-                </div>
-                <div class="col-sm-6">
-                    <ul class="pull-right">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="pages/landing/products.html">Products</a></li>
-                        <li><a href="pages/landing/about-us.html">About Us</a></li>
-                        <li><a href="pages/landing/testimonials.html">Faq</a></li>
-                        <li><a href="pages/landing/contact-us.html">Contact Us</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer><!--/#footer-->
+  	<?php include ('footer.php'); ?>
 </body>
 </html>
